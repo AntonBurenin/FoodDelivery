@@ -13,12 +13,10 @@ class DataManager {
     
     private init() {}
     
-    // Ключом является название блюда , ключ хранит стоимость блюда,Название пиццы - это и есть название фото для этой пиццы
-    let typesOfPizza = ["Margaritha", "Polermo"]
-    let pricePizza   = ["Margaritha" : 235 , "Polermo" : 356]
     
-    // У каждой категории должны быть эти коллекции
     
+    
+    let dishes: [( DishCategoryName , String , Double , String? )] = [(category: DishCategoryName.pizza, name: "Margaritha" , price: 234, description: nil ),(category: DishCategoryName.pizza, name: "Margaritha" , price: 234, description: nil ),(category: DishCategoryName.soup, name: "Margaritha" , price: 234, description: nil )]
     
     
     

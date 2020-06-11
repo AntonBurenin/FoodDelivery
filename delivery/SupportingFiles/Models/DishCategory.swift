@@ -14,12 +14,28 @@ struct DishCategory {
     let  dish : [Dish]
     let photo : String
     
-    static func getDishCategory() -> [DishCategory] {
+    static func getDishCategoryes() -> [DishCategory] {
+        var dishCategoryes = [DishCategory]()
+      var dishes = Dish.getDishes()
+        while !dishes.isEmpty {
+            let category = dishes.first!.typeDish
+            let dishesForCategory = dishes.filter{$0.typeDish == category}
+            if !dishesForCategory.isEmpty {
+                let  name = dishesForCategory.first!.typeDish
+                let category = DishCategory(name: name ,
+                                            dish: dishesForCategory,
+                                            photo:  dishesForCategory.first!.typeDish.rawValue)
+                dishCategoryes.append(category)
+            }
+            dishes = dishes.filter{$0.typeDish != category}
+        }
+           
         
-         let dishCategoryes = [DishCategory]()
         return dishCategoryes
         
     }
+    
+   
 }
 
 
