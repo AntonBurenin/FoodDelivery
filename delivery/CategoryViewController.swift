@@ -12,7 +12,12 @@ class CategoryViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("add")
+        for i in DishCategory.getDishCategoryes() {
+            
+            print(i.name)
+            print(i.dish.count)
+        }
+        
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
