@@ -92,7 +92,6 @@
 			children = (
 				D7FC957824924418003A3945 /* AppDelegate.swift */,
 				D7FC958424924424003A3945 /* Info.plist */,
-				EEAAA30A249272D3000CD8AC /* DataManager.swift */,
 			);
 			path = SupportingFiles;
 			sourceTree = "<group>";
@@ -101,6 +100,7 @@
 			isa = PBXGroup;
 			children = (
 				EEAAA30524926F6C000CD8AC /* DishCategory.swift */,
+				EEAAA30A249272D3000CD8AC /* DataManager.swift */,
 				EEAAA3072492724F000CD8AC /* DishModel.swift */,
 			);
 			name = Models;

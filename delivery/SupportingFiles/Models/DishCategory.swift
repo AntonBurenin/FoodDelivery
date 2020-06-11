@@ -16,7 +16,7 @@ struct DishCategory {
     
     static func getDishCategoryes() -> [DishCategory] {
         var dishCategoryes = [DishCategory]()
-      var dishes = Dish.getDishes()
+        var dishes = Dish.getDishes()
         while !dishes.isEmpty {
             let category = dishes.first!.typeDish
             let dishesForCategory = dishes.filter{$0.typeDish == category}
@@ -29,7 +29,7 @@ struct DishCategory {
             }
             dishes = dishes.filter{$0.typeDish != category}
         }
-           
+        
         
         return dishCategoryes
         
