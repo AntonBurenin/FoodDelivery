@@ -1,20 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="zqO-nS-q4Y">
-    <device id="retina6_1" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="zqO-nS-q4Y">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Root View Controller-->
+        <!--Категории-->
         <scene sceneID="dcx-Yq-561">
             <objects>
                 <tableViewController id="N5T-eK-JHa" customClass="CategoryTableViewController" customModule="delivery" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="lHz-VI-lyq">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" sectionFooterHeight="28" id="lHz-VI-lyq">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -30,7 +28,7 @@
                                             <rect key="frame" x="20" y="3" width="374" height="90"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="uTg-Ns-LqV">
-                                                    <rect key="frame" x="40" y="2" width="314" height="86"/>
+                                                    <rect key="frame" x="2" y="2" width="352" height="86"/>
                                                     <subviews>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8tb-9O-qfp">
                                                             <rect key="frame" x="0.0" y="0.0" width="86" height="86"/>
@@ -49,8 +47,8 @@
                                                                 <constraint firstAttribute="trailing" secondItem="TRM-He-ySv" secondAttribute="trailing" id="uIg-AM-Ybo"/>
                                                             </constraints>
                                                         </view>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="foJ-Dq-IFA">
-                                                            <rect key="frame" x="116" y="25" width="198" height="36"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="justified" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="foJ-Dq-IFA">
+                                                            <rect key="frame" x="116" y="22.5" width="236" height="41"/>
                                                             <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
@@ -58,12 +56,12 @@
                                                     </subviews>
                                                 </stackView>
                                             </subviews>
-                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="backgroundColor" red="1" green="0.71169146927725579" blue="0.081314119232680726" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <constraints>
-                                                <constraint firstItem="uTg-Ns-LqV" firstAttribute="top" secondItem="n6y-ug-vxg" secondAttribute="top" constant="2" id="IgC-g7-Ods"/>
-                                                <constraint firstItem="uTg-Ns-LqV" firstAttribute="leading" secondItem="n6y-ug-vxg" secondAttribute="leading" constant="40" id="XfX-3w-KqZ"/>
-                                                <constraint firstAttribute="trailing" secondItem="uTg-Ns-LqV" secondAttribute="trailing" constant="20" id="kcH-Ee-4KY"/>
-                                                <constraint firstAttribute="bottom" secondItem="uTg-Ns-LqV" secondAttribute="bottom" constant="2" id="qb3-vk-tNK"/>
+                                                <constraint firstItem="uTg-Ns-LqV" firstAttribute="top" secondItem="n6y-ug-vxg" secondAttribute="top" constant="2" id="35K-dn-iGm"/>
+                                                <constraint firstAttribute="bottom" secondItem="uTg-Ns-LqV" secondAttribute="bottom" constant="2" id="855-1K-B31"/>
+                                                <constraint firstAttribute="trailing" secondItem="uTg-Ns-LqV" secondAttribute="trailing" constant="20" id="BTQ-Ja-DO0"/>
+                                                <constraint firstItem="uTg-Ns-LqV" firstAttribute="leading" secondItem="n6y-ug-vxg" secondAttribute="leading" constant="2" id="Pk7-IA-YNj"/>
                                             </constraints>
                                         </view>
                                     </subviews>
@@ -88,7 +86,7 @@
                             <outlet property="delegate" destination="N5T-eK-JHa" id="L09-Np-52v"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="Rkb-db-phy"/>
+                    <navigationItem key="navigationItem" title="Категории" id="Rkb-db-phy"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SyS-Fj-kfP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -116,19 +114,7 @@
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
-                        <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="dishCell" id="gTB-w1-H9c" customClass="DishCell" customModule="delivery" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
-                                    <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </view>
-                                <connections>
-                                    <segue destination="9uE-L1-JQX" kind="show" id="RFb-gK-lkW"/>
-                                </connections>
-                            </collectionViewCell>
-                        </cells>
+                        <cells/>
                         <connections>
                             <outlet property="dataSource" destination="PbX-AN-Tbw" id="rgH-ni-WTc"/>
                             <outlet property="delegate" destination="PbX-AN-Tbw" id="yXC-zF-jfg"/>
@@ -166,8 +152,8 @@
         <scene sceneID="LBa-7i-Pft">
             <objects>
                 <navigationController id="zqO-nS-q4Y" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Sai-70-3k9">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="Sai-70-3k9">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>

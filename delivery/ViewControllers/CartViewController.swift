@@ -15,10 +15,17 @@ class CartViewController: UIViewController, UITableViewDataSource, UITableViewDe
     @IBOutlet weak var sumLabel: UILabel!
     
     var dishes = Cart.shared.getDishes()
+
+    @IBOutlet var viewResult: UIView!
+    
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        confirmButton.layer.cornerRadius = 20
+        
+        viewResult.customViewDesing()
+        confirmButton.customViewDesing()
+        
         navigationItem.title = "Ваш заказ"
         sumLabel.text = constructTextForSumLabel()
         // Do any additional setup after loading the view.
@@ -29,7 +36,7 @@ class CartViewController: UIViewController, UITableViewDataSource, UITableViewDe
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 70
+        return 85
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -47,7 +54,13 @@ class CartViewController: UIViewController, UITableViewDataSource, UITableViewDe
         
         cell.countLabel.text = cell.constructTextForCountLabel()
         cell.photoImageView.image = UIImage(named: dish.photo)
+
         cell.delegate = self
+        
+        cell.contentViewPhoto.customViewDesing()
+        cell.photoView.customViewDesing()
+        cell.photoImageView.customViewDesing()
+
         return cell
     }
     
