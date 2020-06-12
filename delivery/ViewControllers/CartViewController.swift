@@ -8,20 +8,19 @@
 
 import UIKit
 
-class CartViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class CartViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, CartTableViewCellDelegate {
     
+    @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var confirmButton: UIButton!
     @IBOutlet weak var sumLabel: UILabel!
-    let dishes = Cart.shared.dishes
-    var dishesArray: [(Dish, Int)] = []
+    
+    var dishes = Cart.shared.getDishes()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         confirmButton.layer.cornerRadius = 20
         navigationItem.title = "Ваш заказ"
-        for (dish, count) in dishes {
-            dishesArray.append((dish, count))
-        }
-        sumLabel.text = String(format: "%.2f", Cart.shared.getSum()) + "руб"
+        sumLabel.text = constructTextForSumLabel()
         // Do any additional setup after loading the view.
     }
     
@@ -32,27 +31,44 @@ class CartViewController: UIViewController, UITableViewDataSource, UITableViewDe
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 70
     }
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print("yoyyo")
-    }
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cartCell", for: indexPath) as! CartTableViewCell
-        let dish = dishesArray[indexPath.row].0
+        
+        let dish = dishes[indexPath.row].0
+        
         cell.nameLabel.text = dish.name
         cell.priceLabel.text = String(format: "%.2f", dish.price)
-        cell.countLabel.text = "x " + String(dishesArray[indexPath.row].1) + " шт."
+        
+        cell.countStepper.minimumValue = 0
+        cell.countStepper.maximumValue = 9
+        cell.countStepper.value = Double(dishes[indexPath.row].1)
+        cell.countStepper.tag =  indexPath.row
+        
+        cell.countLabel.text = cell.constructTextForCountLabel()
         cell.photoImageView.image = UIImage(named: dish.photo)
+        cell.delegate = self
         return cell
     }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    
+    func didTappedStepper(cell: CartTableViewCell) {
+        if let indexPath = tableView.indexPath(for: cell) {
+            cell.countLabel.text = cell.constructTextForCountLabel()
+            Cart.shared.dishes[dishes[indexPath.row].0] = Int(cell.countStepper.value) != 0 ? Int(cell.countStepper.value) : nil
+            sumLabel.text = constructTextForSumLabel()
+            if cell.countStepper.value == 0 {
+                dishes = Cart.shared.getDishes()
+                tableView.deleteRows(at: [indexPath], with: .fade)
+            } else {
+                dishes = Cart.shared.getDishes()
+                tableView.reloadData()
+                print(sumLabel.text)
+            }
+        }
     }
-    */
+    
+    private func constructTextForSumLabel() -> String {
+        return String(format: "%.2f", Cart.shared.getSum()) + "руб"
+    }
 
 }

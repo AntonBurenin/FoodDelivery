@@ -30,7 +30,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n3m-0S-sKW">
-                                                    <rect key="frame" x="84.5" y="8" width="180.5" height="68.5"/>
+                                                    <rect key="frame" x="84.5" y="8" width="125.5" height="68.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -42,7 +42,7 @@
                                                     </constraints>
                                                 </imageView>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="5pN-gg-GyP">
-                                                    <rect key="frame" x="273" y="8" width="94" height="68.5"/>
+                                                    <rect key="frame" x="218" y="8" width="94" height="68.5"/>
                                                     <subviews>
                                                         <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="3QE-Cp-hvQ">
                                                             <rect key="frame" x="0.0" y="0.0" width="94" height="31.5"/>
@@ -67,7 +67,7 @@
                                                         <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="h2y-jV-vC6">
                                                             <rect key="frame" x="0.0" y="39.5" width="94" height="29"/>
                                                             <connections>
-                                                                <action selector="stepperAction" destination="v8l-ye-bGM" eventType="valueChanged" id="VoW-r1-zPE"/>
+                                                                <action selector="stepperAction:" destination="v8l-ye-bGM" eventType="valueChanged" id="beK-De-YzT"/>
                                                             </connections>
                                                         </stepper>
                                                     </subviews>
@@ -88,6 +88,7 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="countLabel" destination="yRq-32-7os" id="p8m-hU-cH1"/>
+                                            <outlet property="countStepper" destination="h2y-jV-vC6" id="DWl-oZ-q0g"/>
                                             <outlet property="nameLabel" destination="n3m-0S-sKW" id="1Nh-NT-Tm1"/>
                                             <outlet property="photoImageView" destination="ayn-EN-btz" id="QQx-IU-gOG"/>
                                             <outlet property="priceLabel" destination="MzW-eV-PZ5" id="gun-Ay-WwY"/>
@@ -147,6 +148,7 @@
                     <connections>
                         <outlet property="confirmButton" destination="2wU-T3-wXv" id="AhN-NI-G2e"/>
                         <outlet property="sumLabel" destination="Pcm-Wr-P0m" id="dd0-z4-TWc"/>
+                        <outlet property="tableView" destination="82f-2W-Vr3" id="FKt-vj-4Pp"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="is0-un-fzc" userLabel="First Responder" sceneMemberID="firstResponder"/>

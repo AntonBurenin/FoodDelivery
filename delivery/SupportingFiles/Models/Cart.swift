@@ -56,4 +56,19 @@ class Cart {
         dishes[dish] = (dishes[dish] ?? 0) + 1
     }
     
+    func getDishes() -> [(Dish, Int)]{
+        var dishesArray: [(Dish, Int)] = []
+        for (dish, count) in dishes {
+            dishesArray.append((dish, count))
+        }
+        return dishesArray
+    }
+    
+    func updateCart(arrayDishes: [(Dish, Int)]) {
+        dishes = [:]
+        for (dish, count) in arrayDishes {
+            dishes[dish] = count != 0 ? count : nil
+        }
+        print("heeeeeeeyoooo")
+    }
 }
