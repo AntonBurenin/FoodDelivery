@@ -6,8 +6,6 @@
 //  Copyright © 2020 AntonBu. All rights reserved.
 //
 
-import Foundation
-
 struct DishCategory {
     
     let  name : DishCategoryName
@@ -29,19 +27,9 @@ struct DishCategory {
             }
             dishes = dishes.filter{$0.typeDish != category}
         }
-        
-        
         return dishCategoryes
-        
     }
-    
-   
 }
-
-
-
-
-
 
 enum DishCategoryName: String {
     case sushi

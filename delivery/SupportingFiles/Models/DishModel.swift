@@ -6,9 +6,7 @@
 //  Copyright © 2020 AntonBu. All rights reserved.
 //
 
-import Foundation
-
-struct Dish {
+struct Dish: Hashable {
     let typeDish : DishCategoryName
     let name  : String
     let price : Double

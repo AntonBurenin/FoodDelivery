@@ -6,8 +6,6 @@
 //  Copyright © 2020 AntonBu. All rights reserved.
 //
 
-import Foundation
-
 class DataManager {
     static let dataManager = DataManager()
     
