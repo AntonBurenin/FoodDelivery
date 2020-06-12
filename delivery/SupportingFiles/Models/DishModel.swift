@@ -15,16 +15,16 @@ struct Dish {
     let photo : String
     let description : String?
     
-    static func getDishes() -> [Dish] {
-        var dishes = [Dish]()
-        let dataForDishes = DataManager.dataManager.dishes
-        for (typeDish , name , price , description) in dataForDishes {
-            let dish = Dish(typeDish: typeDish, name: name, price: price, photo: name, description: description)
-            dishes.append(dish)
-        }
-        return dishes
-        
-    }
+//    static func getDishes() -> [Dish] {
+//        var dishes = [Dish]()
+//        let dataForDishes = DataManager.dataManager.dishes
+//        for (typeDish , name , price , description) in dataForDishes {
+//            let dish = Dish(typeDish: typeDish, name: name, price: price, photo: name, description: description)
+//            dishes.append(dish)
+//        }
+//        return dishes
+//        
+//    }
     
 }
 

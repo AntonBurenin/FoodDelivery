@@ -14,22 +14,7 @@ class DataManager {
     private init() {}
     
     
-    
-    
-    let dishes: [( DishCategoryName , String , Double , String? )] = [(category: DishCategoryName.pizza,
-                                                                       name: "Margaritha" ,
-                                                                       price: 234,
-                                                                       description: nil ),
-                                                                      (category: DishCategoryName.pizza,
-                                                                       name: "Margaritha" ,
-                                                                       price: 234,
-                                                                       description: nil ),
-                                                                      (category: DishCategoryName.soup,
-                                                                       name: "Margaritha" ,
-                                                                       price: 234,
-                                                                       description: nil )]
-    
-    let disshes: [Dish] = [
+    let dishes: [Dish] = [
         Dish(typeDish: .soup,
              name: "Борщ",
              price: 250,
