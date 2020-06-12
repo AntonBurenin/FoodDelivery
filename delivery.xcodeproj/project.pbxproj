@@ -15,6 +15,7 @@
 		D7188C672492FFE0001D81DF /* Cart.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7188C662492FFE0001D81DF /* Cart.swift */; };
 		D7188C6924930744001D81DF /* CartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7188C6824930744001D81DF /* CartViewController.swift */; };
 		D7188C6D24939D92001D81DF /* CartStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D7188C6C24939D92001D81DF /* CartStoryboard.storyboard */; };
+		D7188C6F2493B681001D81DF /* CartTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7188C6E2493B681001D81DF /* CartTableViewCell.swift */; };
 		D7FC957924924418003A3945 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7FC957824924418003A3945 /* AppDelegate.swift */; };
 		D7FC957E24924418003A3945 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D7FC957C24924418003A3945 /* Main.storyboard */; };
 		D7FC958024924424003A3945 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D7FC957F24924424003A3945 /* Assets.xcassets */; };
@@ -33,6 +34,7 @@
 		D7188C662492FFE0001D81DF /* Cart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cart.swift; sourceTree = "<group>"; };
 		D7188C6824930744001D81DF /* CartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartViewController.swift; sourceTree = "<group>"; };
 		D7188C6C24939D92001D81DF /* CartStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CartStoryboard.storyboard; sourceTree = "<group>"; };
+		D7188C6E2493B681001D81DF /* CartTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartTableViewCell.swift; sourceTree = "<group>"; };
 		D7FC957524924418003A3945 /* delivery.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = delivery.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7FC957824924418003A3945 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D7FC957D24924418003A3945 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -58,6 +60,7 @@
 		113A78FF24929A14001C859A /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				D7188C6E2493B681001D81DF /* CartTableViewCell.swift */,
 				D7188C6824930744001D81DF /* CartViewController.swift */,
 				113A78F9249299C8001C859A /* CategoryTableViewController.swift */,
 				116A65332493D75700E7A9D5 /* CustomTableViewCell.swift */,
@@ -200,6 +203,7 @@
 				EEAAA30624926F6C000CD8AC /* DishCategory.swift in Sources */,
 				113A78FC249299EB001C859A /* MenuListCollectionViewController.swift in Sources */,
 				D7FC957924924418003A3945 /* AppDelegate.swift in Sources */,
+				D7188C6F2493B681001D81DF /* CartTableViewCell.swift in Sources */,
 				EEAAA3082492724F000CD8AC /* DishModel.swift in Sources */,
 				113A78FA249299C8001C859A /* CategoryTableViewController.swift in Sources */,
 			);
