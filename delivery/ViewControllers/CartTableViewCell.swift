@@ -20,8 +20,6 @@ class CartTableViewCell: UITableViewCell {
     @IBOutlet weak var priceLabel: UILabel!
     @IBOutlet weak var countLabel: UILabel!
     
-    @IBOutlet weak var countStepper: UIStepper!
-    
     @IBOutlet var contentViewPhoto: UIView!
     @IBOutlet var photoView: UIView!
     @IBOutlet weak var photoImageView: UIImageView!
@@ -34,12 +32,12 @@ class CartTableViewCell: UITableViewCell {
         stepperCustom.customViewDesing()
     }
     
-    @IBAction func stepperAction(_ sender: UIStepper) {
+    @IBAction func stepperDidTapped() {
         delegate.didTappedStepper(cell: self)
     }
     
     func constructTextForCountLabel() -> String {
-        return "x " + String(Int(countStepper.value)) + " шт."
+        return "x " + String(Int(stepperCustom.value)) + " шт."
     }
     
 }

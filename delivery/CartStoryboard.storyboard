@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina4_0" orientation="portrait" appearance="light"/>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -35,7 +37,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
-                                        <color key="backgroundColor" systemColor="systemGray4Color" red="0.81960784310000001" green="0.81960784310000001" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" red="0.81960784310000001" green="0.81960784310000001" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="2Dz-4H-CRt"/>
                                             <constraint firstItem="vYP-h0-u35" firstAttribute="leading" secondItem="829-Lo-VVo" secondAttribute="leading" constant="8" id="5BC-XD-hx7"/>
@@ -66,7 +68,7 @@
                                 </constraints>
                             </stackView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="82f-2W-Vr3">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="378.5"/>
+                                <rect key="frame" x="0.0" y="20" width="320" height="358.5"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cartCell" rowHeight="85" id="v8l-ye-bGM" customClass="CartTableViewCell" customModule="delivery" customModuleProvider="target">
@@ -80,7 +82,7 @@
                                                     <rect key="frame" x="9" y="6" width="302" height="72"/>
                                                     <subviews>
                                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="22" translatesAutoresizingMaskIntoConstraints="NO" id="Mri-oI-7pZ">
-                                                            <rect key="frame" x="200" y="2" width="94" height="68.5"/>
+                                                            <rect key="frame" x="200" y="2" width="94" height="65.5"/>
                                                             <subviews>
                                                                 <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="3QE-Cp-hvQ">
                                                                     <rect key="frame" x="0.0" y="0.0" width="94" height="14.5"/>
@@ -103,9 +105,9 @@
                                                                     </constraints>
                                                                 </stackView>
                                                                 <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="h2y-jV-vC6">
-                                                                    <rect key="frame" x="0.0" y="36.5" width="94" height="32"/>
+                                                                    <rect key="frame" x="0.0" y="36.5" width="94" height="29"/>
                                                                     <connections>
-                                                                        <action selector="stepperAction" destination="v8l-ye-bGM" eventType="valueChanged" id="VoW-r1-zPE"/>
+                                                                        <action selector="stepperDidTapped" destination="v8l-ye-bGM" eventType="valueChanged" id="86k-dR-HCJ"/>
                                                                     </connections>
                                                                 </stepper>
                                                             </subviews>
@@ -137,7 +139,7 @@
                                                                     </constraints>
                                                                 </imageView>
                                                             </subviews>
-                                                            <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <constraints>
                                                                 <constraint firstItem="ayn-EN-btz" firstAttribute="leading" secondItem="ESd-KD-lgN" secondAttribute="leading" id="7aG-yp-xNb"/>
                                                                 <constraint firstAttribute="height" constant="64" id="g9E-jZ-eKh"/>
@@ -296,6 +298,7 @@
                     <connections>
                         <outlet property="confirmButton" destination="2wU-T3-wXv" id="AhN-NI-G2e"/>
                         <outlet property="sumLabel" destination="Pcm-Wr-P0m" id="dd0-z4-TWc"/>
+                        <outlet property="tableView" destination="82f-2W-Vr3" id="urT-WR-SM8"/>
                         <outlet property="viewResult" destination="829-Lo-VVo" id="C4M-nS-rmu"/>
                     </connections>
                 </viewController>
