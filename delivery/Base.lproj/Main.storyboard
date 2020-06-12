@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="zqO-nS-q4Y">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="zqO-nS-q4Y">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -37,7 +39,7 @@
                                                                     <rect key="frame" x="0.0" y="0.0" width="86" height="86"/>
                                                                 </imageView>
                                                             </subviews>
-                                                            <color key="backgroundColor" systemColor="systemGray6Color" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <color key="backgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="86" id="1Up-px-TPP"/>
                                                                 <constraint firstItem="TRM-He-ySv" firstAttribute="top" secondItem="8tb-9O-qfp" secondAttribute="top" id="3Xj-XD-WLz"/>
@@ -48,7 +50,7 @@
                                                             </constraints>
                                                         </view>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="foJ-Dq-IFA">
-                                                            <rect key="frame" x="116" y="22.5" width="198" height="41"/>
+                                                            <rect key="frame" x="116" y="25" width="198" height="36"/>
                                                             <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
@@ -56,7 +58,7 @@
                                                     </subviews>
                                                 </stackView>
                                             </subviews>
-                                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <constraints>
                                                 <constraint firstItem="uTg-Ns-LqV" firstAttribute="top" secondItem="n6y-ug-vxg" secondAttribute="top" constant="2" id="IgC-g7-Ods"/>
                                                 <constraint firstItem="uTg-Ns-LqV" firstAttribute="leading" secondItem="n6y-ug-vxg" secondAttribute="leading" constant="40" id="XfX-3w-KqZ"/>
@@ -91,6 +93,14 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SyS-Fj-kfP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="753.62318840579712" y="145.98214285714286"/>
+        </scene>
+        <!--cartView-->
+        <scene sceneID="8L7-11-W3O">
+            <objects>
+                <viewControllerPlaceholder storyboardName="CartStoryboard" referencedIdentifier="cartView" id="EIW-hL-jvs" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sAa-DC-Cog" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1720" y="-229"/>
         </scene>
         <!--Menu List Collection View Controller-->
         <scene sceneID="Ah0-U6-1vB">
@@ -127,7 +137,7 @@
                     <navigationItem key="navigationItem" id="Han-vC-puK">
                         <barButtonItem key="rightBarButtonItem" title="Cart" id="T1R-cb-2gb">
                             <connections>
-                                <segue destination="XOp-eJ-9Tp" kind="show" id="N5o-R0-v2q"/>
+                                <segue destination="EIW-hL-jvs" kind="show" id="nW1-Zg-2yI"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -135,14 +145,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="83p-gr-XIe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1578.2608695652175" y="145.98214285714286"/>
-        </scene>
-        <!--cartView-->
-        <scene sceneID="chM-vE-qNP">
-            <objects>
-                <viewControllerPlaceholder storyboardName="CartStoryboard" referencedIdentifier="cartView" id="XOp-eJ-9Tp" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="pPQ-DC-wTa" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1992" y="-265"/>
         </scene>
         <!--Description Dish View Controller-->
         <scene sceneID="gNh-bN-eN3">
