@@ -12,11 +12,17 @@ class CartViewController: UIViewController, UITableViewDataSource, UITableViewDe
     
     @IBOutlet weak var confirmButton: UIButton!
     @IBOutlet weak var sumLabel: UILabel!
+    @IBOutlet var viewResult: UIView!
+    
     let dishes = Cart.shared.dishes
     var dishesArray: [(Dish, Int)] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        confirmButton.layer.cornerRadius = 20
+        
+        viewResult.customViewDesing()
+        confirmButton.customViewDesing()
+        
         navigationItem.title = "Ваш заказ"
         for (dish, count) in dishes {
             dishesArray.append((dish, count))
@@ -30,7 +36,7 @@ class CartViewController: UIViewController, UITableViewDataSource, UITableViewDe
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 70
+        return 85
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print("yoyyo")
@@ -42,6 +48,10 @@ class CartViewController: UIViewController, UITableViewDataSource, UITableViewDe
         cell.priceLabel.text = String(format: "%.2f", dish.price)
         cell.countLabel.text = "x " + String(dishesArray[indexPath.row].1) + " шт."
         cell.photoImageView.image = UIImage(named: dish.photo)
+        
+        cell.contentViewPhoto.customViewDesing()
+        cell.photoView.customViewDesing()
+        cell.photoImageView.customViewDesing()
         return cell
     }
 
