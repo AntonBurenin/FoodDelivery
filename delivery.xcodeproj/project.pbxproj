@@ -11,6 +11,8 @@
 		113A78FC249299EB001C859A /* MenuListCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 113A78FB249299EB001C859A /* MenuListCollectionViewController.swift */; };
 		113A78FE24929A08001C859A /* DescriptionDishViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 113A78FD24929A08001C859A /* DescriptionDishViewController.swift */; };
 		113A79012492A10B001C859A /* DishCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 113A79002492A10B001C859A /* DishCell.swift */; };
+		D7188C672492FFE0001D81DF /* Cart.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7188C662492FFE0001D81DF /* Cart.swift */; };
+		D7188C6924930744001D81DF /* CartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7188C6824930744001D81DF /* CartViewController.swift */; };
 		D7FC957924924418003A3945 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7FC957824924418003A3945 /* AppDelegate.swift */; };
 		D7FC957E24924418003A3945 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D7FC957C24924418003A3945 /* Main.storyboard */; };
 		D7FC958024924424003A3945 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D7FC957F24924424003A3945 /* Assets.xcassets */; };
@@ -25,6 +27,8 @@
 		113A78FB249299EB001C859A /* MenuListCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuListCollectionViewController.swift; sourceTree = "<group>"; };
 		113A78FD24929A08001C859A /* DescriptionDishViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescriptionDishViewController.swift; sourceTree = "<group>"; };
 		113A79002492A10B001C859A /* DishCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DishCell.swift; sourceTree = "<group>"; };
+		D7188C662492FFE0001D81DF /* Cart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cart.swift; sourceTree = "<group>"; };
+		D7188C6824930744001D81DF /* CartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartViewController.swift; sourceTree = "<group>"; };
 		D7FC957524924418003A3945 /* delivery.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = delivery.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7FC957824924418003A3945 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D7FC957D24924418003A3945 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -50,6 +54,7 @@
 		113A78FF24929A14001C859A /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				D7188C6824930744001D81DF /* CartViewController.swift */,
 				113A78F9249299C8001C859A /* CategoryTableViewController.swift */,
 				113A78FB249299EB001C859A /* MenuListCollectionViewController.swift */,
 				113A79002492A10B001C859A /* DishCell.swift */,
@@ -92,7 +97,6 @@
 			children = (
 				D7FC957824924418003A3945 /* AppDelegate.swift */,
 				D7FC958424924424003A3945 /* Info.plist */,
-				EEAAA30A249272D3000CD8AC /* DataManager.swift */,
 			);
 			path = SupportingFiles;
 			sourceTree = "<group>";
@@ -101,7 +105,9 @@
 			isa = PBXGroup;
 			children = (
 				EEAAA30524926F6C000CD8AC /* DishCategory.swift */,
+				EEAAA30A249272D3000CD8AC /* DataManager.swift */,
 				EEAAA3072492724F000CD8AC /* DishModel.swift */,
+				D7188C662492FFE0001D81DF /* Cart.swift */,
 			);
 			name = Models;
 			path = SupportingFiles/Models;
@@ -179,6 +185,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				113A78FE24929A08001C859A /* DescriptionDishViewController.swift in Sources */,
+				D7188C672492FFE0001D81DF /* Cart.swift in Sources */,
+				D7188C6924930744001D81DF /* CartViewController.swift in Sources */,
 				EEAAA30B249272D3000CD8AC /* DataManager.swift in Sources */,
 				113A79012492A10B001C859A /* DishCell.swift in Sources */,
 				EEAAA30624926F6C000CD8AC /* DishCategory.swift in Sources */,

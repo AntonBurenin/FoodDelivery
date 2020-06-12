@@ -6,8 +6,6 @@
 //  Copyright © 2020 AntonBu. All rights reserved.
 //
 
-import Foundation
-
 struct DishCategory {
     
     let  name : DishCategoryName
@@ -16,7 +14,7 @@ struct DishCategory {
     
     static func getDishCategoryes() -> [DishCategory] {
         var dishCategoryes = [DishCategory]()
-      var dishes = Dish.getDishes()
+        var dishes = DataManager.dataManager.dishes
         while !dishes.isEmpty {
             let category = dishes.first!.typeDish
             let dishesForCategory = dishes.filter{$0.typeDish == category}
@@ -29,19 +27,9 @@ struct DishCategory {
             }
             dishes = dishes.filter{$0.typeDish != category}
         }
-           
-        
         return dishCategoryes
-        
     }
-    
-   
 }
-
-
-
-
-
 
 enum DishCategoryName: String {
     case sushi
