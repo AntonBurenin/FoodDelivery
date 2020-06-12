@@ -28,9 +28,24 @@ class CategoryTableViewController: UITableViewController {
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "category", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "category", for: indexPath) as! CustomTableViewCell
 
-        cell.textLabel?.text = listCategory[indexPath.row].name.rawValue
+        cell.catigoriesLabel.text = listCategory[indexPath.row].name.rawValue.capitalized
+        cell.customImageView.image =  UIImage(named: listCategory[indexPath.row].name.rawValue)
+        
+        cell.customImageView.layer.cornerRadius = cell.customImageView.frame.height / 4
+        cell.customImageView.clipsToBounds = true
+        
+        cell.customView.layer.cornerRadius = cell.customView.frame.height / 4
+               cell.customView.layer.shadowOpacity = 1
+               cell.customView.layer.shadowRadius = 5
+               cell.customView.layer.shadowOffset = CGSize(width: 0.0, height: 6.0)
+        
+        cell.contentCustomView.layer.cornerRadius = cell.customView.frame.height / 4
+        cell.contentCustomView.layer.shadowOpacity = 1
+        cell.contentCustomView.layer.shadowRadius = 5
+        cell.contentCustomView.layer.shadowOffset = CGSize(width: 0.0, height: 6.0)
+        
         
 
         return cell
