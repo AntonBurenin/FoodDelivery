@@ -10,7 +10,7 @@ import UIKit
 
 class CategoryTableViewController: UITableViewController {
 
-    var listCategory = DishCategory.getDishCategoryes()
+    var listCategory = DishCategory.getDishCategoryes() // лучше сделать let
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,7 +23,7 @@ class CategoryTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
        
-        return listCategory.count
+        return listCategory.count // можно не писать return 
     }
 
     
@@ -77,8 +77,8 @@ class CategoryTableViewController: UITableViewController {
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
        guard let indexPath = tableView.indexPathForSelectedRow  else { return }
-        let dishCollection = segue.destination as! MenuListCollectionViewController
-        dishCollection.cellImage = listCategory[indexPath.row]
+        let dishCollectionVC = segue.destination as! CollectionDishViewController
+        dishCollectionVC.dishesInCategory = listCategory[indexPath.row].dish
     }
 
 }
