@@ -18,3 +18,8 @@ class DishCollectionViewCell: UICollectionViewCell {
     
     
 }
+
+struct Constrants {
+    static let leftDistanceToView: CGFloat = 10
+      static let rightDistanceToView: CGFloat = 10
+}

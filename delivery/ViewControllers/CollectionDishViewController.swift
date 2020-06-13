@@ -14,7 +14,9 @@ class CollectionDishViewController: UIViewController {
     @IBOutlet var dishCollectionView: UICollectionView!
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        let layout = UICollectionViewFlowLayout()
+        layout.itemSize = CGSize(width: 143, height: 235)
+        dishCollectionView.collectionViewLayout = layout
     }
     
     //MARK : - Public Property
@@ -44,4 +46,11 @@ extension CollectionDishViewController: UICollectionViewDataSource {
     }
     
     
+}
+
+//MARK : - UICollectionViewDelegateFlowLayout
+extension CollectionDishViewController: UICollectionViewDelegateFlowLayout {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: 143, height: 235)
+    }
 }

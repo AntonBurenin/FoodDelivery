@@ -10,7 +10,6 @@
 		113A78FA249299C8001C859A /* CategoryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 113A78F9249299C8001C859A /* CategoryTableViewController.swift */; };
 		113A78FC249299EB001C859A /* MenuListCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 113A78FB249299EB001C859A /* MenuListCollectionViewController.swift */; };
 		113A78FE24929A08001C859A /* DescriptionDishViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 113A78FD24929A08001C859A /* DescriptionDishViewController.swift */; };
-		113A79012492A10B001C859A /* DishCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 113A79002492A10B001C859A /* DishCell.swift */; };
 		D7188C672492FFE0001D81DF /* Cart.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7188C662492FFE0001D81DF /* Cart.swift */; };
 		D7188C6924930744001D81DF /* CartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7188C6824930744001D81DF /* CartViewController.swift */; };
 		D7188C6D24939D92001D81DF /* CartStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D7188C6C24939D92001D81DF /* CartStoryboard.storyboard */; };
@@ -22,7 +21,6 @@
 		EEAAA3082492724F000CD8AC /* DishModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEAAA3072492724F000CD8AC /* DishModel.swift */; };
 		EEAAA30B249272D3000CD8AC /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEAAA30A249272D3000CD8AC /* DataManager.swift */; };
 		EEAAA30D2493BEA6000CD8AC /* CollectionDish.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EEAAA30C2493BEA6000CD8AC /* CollectionDish.storyboard */; };
-		EEAAA3112493C262000CD8AC /* CollectionDishViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEAAA3102493C262000CD8AC /* CollectionDishViewController.swift */; };
 		EEAAA3132493C48D000CD8AC /* DishCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEAAA3122493C48D000CD8AC /* DishCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
@@ -30,7 +28,6 @@
 		113A78F9249299C8001C859A /* CategoryTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryTableViewController.swift; sourceTree = "<group>"; };
 		113A78FB249299EB001C859A /* MenuListCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuListCollectionViewController.swift; sourceTree = "<group>"; };
 		113A78FD24929A08001C859A /* DescriptionDishViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescriptionDishViewController.swift; sourceTree = "<group>"; };
-		113A79002492A10B001C859A /* DishCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DishCell.swift; sourceTree = "<group>"; };
 		D7188C662492FFE0001D81DF /* Cart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cart.swift; sourceTree = "<group>"; };
 		D7188C6824930744001D81DF /* CartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartViewController.swift; sourceTree = "<group>"; };
 		D7188C6C24939D92001D81DF /* CartStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CartStoryboard.storyboard; sourceTree = "<group>"; };
@@ -44,7 +41,6 @@
 		EEAAA3072492724F000CD8AC /* DishModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DishModel.swift; sourceTree = "<group>"; };
 		EEAAA30A249272D3000CD8AC /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		EEAAA30C2493BEA6000CD8AC /* CollectionDish.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CollectionDish.storyboard; sourceTree = "<group>"; };
-		EEAAA3102493C262000CD8AC /* CollectionDishViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionDishViewController.swift; sourceTree = "<group>"; };
 		EEAAA3122493C48D000CD8AC /* DishCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DishCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -63,10 +59,8 @@
 			isa = PBXGroup;
 			children = (
 				D7188C6824930744001D81DF /* CartViewController.swift */,
-				EEAAA3102493C262000CD8AC /* CollectionDishViewController.swift */,
 				113A78F9249299C8001C859A /* CategoryTableViewController.swift */,
 				113A78FB249299EB001C859A /* MenuListCollectionViewController.swift */,
-				113A79002492A10B001C859A /* DishCell.swift */,
 				113A78FD24929A08001C859A /* DescriptionDishViewController.swift */,
 			);
 			path = ViewControllers;
@@ -93,9 +87,9 @@
 			children = (
 				D7FC958A24924464003A3945 /* SupportingFiles */,
 				D7FC957C24924418003A3945 /* Main.storyboard */,
-				D7FC957F24924424003A3945 /* Assets.xcassets */,
-				D7188C6C24939D92001D81DF /* CartStoryboard.storyboard */,
 				D7FC958124924424003A3945 /* LaunchScreen.storyboard */,
+				D7FC957F24924424003A3945 /* Assets.xcassets */,
+				EEAAA31624951A19000CD8AC /* CartStoryBoard */,
 				EEAAA30C2493BEA6000CD8AC /* CollectionDish.storyboard */,
 				EEAAA309249272B8000CD8AC /* Models */,
 				113A78FF24929A14001C859A /* ViewControllers */,
@@ -123,6 +117,14 @@
 			);
 			name = Models;
 			path = SupportingFiles/Models;
+			sourceTree = "<group>";
+		};
+		EEAAA31624951A19000CD8AC /* CartStoryBoard */ = {
+			isa = PBXGroup;
+			children = (
+				D7188C6C24939D92001D81DF /* CartStoryboard.storyboard */,
+			);
+			path = CartStoryBoard;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -202,9 +204,7 @@
 				D7188C672492FFE0001D81DF /* Cart.swift in Sources */,
 				D7188C6924930744001D81DF /* CartViewController.swift in Sources */,
 				EEAAA30B249272D3000CD8AC /* DataManager.swift in Sources */,
-				113A79012492A10B001C859A /* DishCell.swift in Sources */,
 				EEAAA30624926F6C000CD8AC /* DishCategory.swift in Sources */,
-				EEAAA3112493C262000CD8AC /* CollectionDishViewController.swift in Sources */,
 				113A78FC249299EB001C859A /* MenuListCollectionViewController.swift in Sources */,
 				D7FC957924924418003A3945 /* AppDelegate.swift in Sources */,
 				EEAAA3082492724F000CD8AC /* DishModel.swift in Sources */,

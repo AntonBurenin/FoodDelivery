@@ -11,4 +11,5 @@ import UIKit
 class DishCell: UICollectionViewCell {
     @IBOutlet var imageDishView: UIImageView!
     
+    
 }
