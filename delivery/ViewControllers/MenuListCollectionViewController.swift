@@ -12,31 +12,26 @@ import UIKit
 
 class MenuListCollectionViewController: UICollectionViewController {
     
-    
+    //MARK : - Public Property
+     var dishes : [Dish]!
+     var category : DishCategoryName!
+    //MARK : - Private Property
     private let reuseIdentifier = "dishCell"
    
-    var dishes : [Dish]!
-    
+    //MARK : - Life Cycles View Controller
     override func viewDidLoad() {
         super.viewDidLoad()
-        // collectionView.translatesAutoresizingMaskIntoConstraints = false
-        let layout = UICollectionViewFlowLayout()
-        layout.minimumLineSpacing = 10
-        collectionView.contentInset = UIEdgeInsets(top: 15, left: 10, bottom: 10, right: 15)
-        layout.itemSize = CGSize(width: 143, height: 235)
-        collectionView.collectionViewLayout = layout
-       
-        
+        navigationItem.title = category.rawValue
+        setupCollectionView()
     }
+    
+    //MARK : - Override Methods
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return dishes.count
     }
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! DishCollectionViewCell
-        
-        //print(cell)
-        
         cell.nameLabel.text = dishes[indexPath.item].name
     
         cell.priceLabel.text = "\(dishes[indexPath.item].price)"
@@ -46,10 +41,22 @@ class MenuListCollectionViewController: UICollectionViewController {
         }
         return cell
     }
+    
+    //MARK : - Private Methods
+    private func setupCollectionView() {
+        let layout = UICollectionViewFlowLayout()
+        layout.minimumLineSpacing = Constrants.minimumLineSpacing
+        collectionView.contentInset = UIEdgeInsets(top: Constrants.topDistanceToView ,
+                                                   left: Constrants.leftDistanceToView ,
+                                                   bottom: Constrants.bottomDistanceToView,
+                                                   right: Constrants.rightDistanceToView)
+        layout.itemSize = CGSize(width: Constrants.width , height: Constrants.height)
+        collectionView.collectionViewLayout = layout
+    }
 }
 
 extension MenuListCollectionViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: 143, height: 235)
+        return CGSize(width: Constrants.width, height: Constrants.height)
     }
 }

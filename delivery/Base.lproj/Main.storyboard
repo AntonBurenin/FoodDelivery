@@ -7,7 +7,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Root View Controller-->
+        <!--Menu-->
         <scene sceneID="dcx-Yq-561">
             <objects>
                 <tableViewController id="N5T-eK-JHa" customClass="CategoryTableViewController" customModule="delivery" customModuleProvider="target" sceneMemberID="viewController">
@@ -33,7 +33,7 @@
                             <outlet property="delegate" destination="N5T-eK-JHa" id="L09-Np-52v"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="Rkb-db-phy"/>
+                    <navigationItem key="navigationItem" title="Menu" id="Rkb-db-phy"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SyS-Fj-kfP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

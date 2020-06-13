@@ -42,6 +42,7 @@ class CategoryTableViewController: UITableViewController {
        guard let indexPath = tableView.indexPathForSelectedRow  else { return }
         let dishCollectionVC = segue.destination as! MenuListCollectionViewController
         dishCollectionVC.dishes = listCategory[indexPath.row].dish
+        dishCollectionVC.category = listCategory[indexPath.row].name
     }
 
 }

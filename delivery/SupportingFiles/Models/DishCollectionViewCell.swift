@@ -21,5 +21,10 @@ class DishCollectionViewCell: UICollectionViewCell {
 
 struct Constrants {
     static let leftDistanceToView: CGFloat = 10
-      static let rightDistanceToView: CGFloat = 10
+    static let rightDistanceToView: CGFloat = 10
+    static let minimumLineSpacing: CGFloat = 15
+    static let topDistanceToView: CGFloat = 20
+    static let bottomDistanceToView: CGFloat = 20
+    static let width = 143
+    static let height = 235
 }

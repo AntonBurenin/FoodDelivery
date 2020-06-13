@@ -102,7 +102,6 @@
 			children = (
 				D7FC957824924418003A3945 /* AppDelegate.swift */,
 				D7FC958424924424003A3945 /* Info.plist */,
-				EEAAA3122493C48D000CD8AC /* DishCollectionViewCell.swift */,
 			);
 			path = SupportingFiles;
 			sourceTree = "<group>";
@@ -110,6 +109,7 @@
 		EEAAA309249272B8000CD8AC /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				EEAAA3122493C48D000CD8AC /* DishCollectionViewCell.swift */,
 				EEAAA30524926F6C000CD8AC /* DishCategory.swift */,
 				EEAAA30A249272D3000CD8AC /* DataManager.swift */,
 				EEAAA3072492724F000CD8AC /* DishModel.swift */,
