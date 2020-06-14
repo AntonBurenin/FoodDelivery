@@ -8,81 +8,84 @@
 
 import UIKit
 
-private let reuseIdentifier = "cellImage"
-
 class MenuListCollectionViewController: UICollectionViewController {
     
-    var cellImage: DishCategory!
+    //MARK: - Public Property
+    var dishes : [Dish]!
+    var category : DishCategoryName!
+    //MARK: - Private Property
+    private let reuseIdentifier = "dishCell"
     
+    //MARK : - Life Cycles View Controller
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        
-        self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
-
+        navigationItem.title = category.rawValue
+        setupCollectionView()
         
     }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using [segue destinationViewController].
-        // Pass the selected object to the new view controller.
-    }
-    */
-
-    // MARK: UICollectionViewDataSource
-
-    override func numberOfSections(in collectionView: UICollectionView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
-    }
-
-
+    
+    //MARK: - Override Methods
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of items
-        return 0
+        return dishes.count
     }
-
+    
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath)
-    
-        // Configure the cell
-    
+        
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! DishCollectionViewCell
+        
+        cell.dish = dishes[indexPath.item]
+        cell.nameLabel.text = dishes[indexPath.item].name
+        cell.priceLabel.text = "\(dishes[indexPath.item].price)"
+        if let image = UIImage(named: dishes[indexPath.item].name) {
+            cell.dishImage.image = image
+        }
+        cell.dishImage.customView()
+        cell.dishCustomView.customView()
+        cell.viewDish.layer.cornerRadius = cell.viewDish.frame.width / 6
+        
         return cell
     }
-
-    // MARK: UICollectionViewDelegate
-
-    /*
-    // Uncomment this method to specify if the specified item should be highlighted during tracking
-    override func collectionView(_ collectionView: UICollectionView, shouldHighlightItemAt indexPath: IndexPath) -> Bool {
-        return true
-    }
-    */
-
-    /*
-    // Uncomment this method to specify if the specified item should be selected
-    override func collectionView(_ collectionView: UICollectionView, shouldSelectItemAt indexPath: IndexPath) -> Bool {
-        return true
-    }
-    */
-
-    /*
-    // Uncomment these methods to specify if an action menu should be displayed for the specified item, and react to actions performed on the item
-    override func collectionView(_ collectionView: UICollectionView, shouldShowMenuForItemAt indexPath: IndexPath) -> Bool {
-        return false
-    }
-
-    override func collectionView(_ collectionView: UICollectionView, canPerformAction action: Selector, forItemAt indexPath: IndexPath, withSender sender: Any?) -> Bool {
-        return false
-    }
-
-    override func collectionView(_ collectionView: UICollectionView, performAction action: Selector, forItemAt indexPath: IndexPath, withSender sender: Any?) {
     
+    //MARK: - Private Methods
+    private func setupCollectionView() {
+        let layout = UICollectionViewFlowLayout()
+        layout.minimumLineSpacing = Constrants.minimumLineSpacing
+        collectionView.contentInset = UIEdgeInsets(top: Constrants.topDistanceToView ,
+                                                   left: Constrants.leftDistanceToView ,
+                                                   bottom: Constrants.bottomDistanceToView,
+                                                   right: Constrants.rightDistanceToView)
+        layout.itemSize = CGSize(width: Constrants.width , height: Constrants.height)
+        collectionView.collectionViewLayout = layout
     }
-    */
+    
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let indexPath = collectionView.indexPathsForSelectedItems  else { return }
+        guard let numberofitem = indexPath.first else { return }
+        let descriptionDishVC = segue.destination as! DescriptionDishViewController
+        descriptionDishVC.nameDish = dishes[numberofitem.item].name
+        descriptionDishVC.price    = "\(dishes[numberofitem.item].price)"
+        if let description = dishes[numberofitem.item].description {
+             descriptionDishVC.descriptionText = description
+        }
+        if let image = UIImage(named: dishes[numberofitem.item].name) {
+            descriptionDishVC.dishImage = image
+        }
+        }
+    
+}
 
+extension MenuListCollectionViewController: UICollectionViewDelegateFlowLayout {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: Constrants.width, height: Constrants.height)
+    }
+}
+
+extension UIView {
+    func customView() {
+        self.layer.cornerRadius = self.frame.width / 6
+        self.layer.shadowOpacity = 1.5
+        self.layer.shadowRadius = 4
+        self.layer.shadowOffset = CGSize.zero
+    }
 }

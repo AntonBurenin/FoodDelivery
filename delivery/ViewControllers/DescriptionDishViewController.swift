@@ -9,22 +9,47 @@
 import UIKit
 
 class DescriptionDishViewController: UIViewController {
-
+    @IBOutlet var nameLabel: UILabel!
+    @IBOutlet var priceLabel: UILabel!
+  
+    @IBOutlet var descriptionTextView: UITextView!
+    
+    @IBOutlet var contentView: UIView!
+    @IBOutlet var dishImageView: UIImageView!
+    @IBOutlet var viewCustom: UIView!
+    @IBOutlet var cardButton: UIButton!
+    
+    var nameDish: String!
+    var price: String!
+    var dishImage: UIImage?
+    var descriptionText: String?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        nameLabel.text = nameDish
+        priceLabel.text = "\(price.description) p"
+        dishImageView.image = dishImage
+        descriptionTextView.text = descriptionText
+        
+        contentView.desinView()
+        dishImageView.desinView()
+        viewCustom.desinView()
+        cardButton.desinView()
+        descriptionTextView.desinView()
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func cartButtonPressed() {
+        
     }
-    */
+}
 
+
+extension UIView {
+    func desinView() {
+        self.layer.cornerRadius = self.frame.width / 19
+        self.layer.shadowOpacity = 1.5
+        self.layer.shadowRadius = 4
+        self.layer.shadowOffset = CGSize.zero
+    }
 }
