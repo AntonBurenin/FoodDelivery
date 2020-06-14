@@ -63,15 +63,8 @@ class MenuListCollectionViewController: UICollectionViewController {
         guard let indexPath = collectionView.indexPathsForSelectedItems  else { return }
         guard let numberofitem = indexPath.first else { return }
         let descriptionDishVC = segue.destination as! DescriptionDishViewController
-        descriptionDishVC.nameDish = dishes[numberofitem.item].name
-        descriptionDishVC.price    = "\(dishes[numberofitem.item].price)"
-        if let description = dishes[numberofitem.item].description {
-             descriptionDishVC.descriptionText = description
-        }
-        if let image = UIImage(named: dishes[numberofitem.item].name) {
-            descriptionDishVC.dishImage = image
-        }
-        }
+        descriptionDishVC.dish = dishes[numberofitem.item]
+    }
     
 }
 

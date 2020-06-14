@@ -94,8 +94,8 @@ class DataManager {
              name: "Свежевыжатый апельсиновый сок",
              price: 160,
              photo: "Свежевыжатый апельсиновый сок",
-             description: "<#T##String?#>"),
-        Dish(typeDish: .soup, name: "Суп Куриная лапша", price: 190, photo: "Суп Куриная лапша", description: "<#T##String?#>")
+             description: nil),
+        Dish(typeDish: .soup, name: "Суп Куриная лапша", price: 190, photo: "Суп Куриная лапша", description: nil)
         
     ]
     

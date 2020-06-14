@@ -19,18 +19,15 @@ class DescriptionDishViewController: UIViewController {
     @IBOutlet var viewCustom: UIView!
     @IBOutlet var cardButton: UIButton!
     
-    var nameDish: String!
-    var price: String!
-    var dishImage: UIImage?
-    var descriptionText: String?
+    var dish: Dish!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        nameLabel.text = nameDish
-        priceLabel.text = "\(price.description) p"
-        dishImageView.image = dishImage
-        descriptionTextView.text = descriptionText
+        nameLabel.text = dish.name
+        priceLabel.text = "\(dish.price.description) p"
+        dishImageView.image = UIImage(named: dish.photo)
+        descriptionTextView.text = dish.description ?? dish.name
         
         contentView.desinView()
         dishImageView.desinView()
@@ -40,6 +37,7 @@ class DescriptionDishViewController: UIViewController {
     }
     
     @IBAction func cartButtonPressed() {
+        Cart.shared.addDish(dish)
         dismiss(animated: true)
     }
 }
