@@ -127,7 +127,7 @@
                         </connections>
                     </collectionView>
                     <connections>
-                        <segue destination="EAD-Jx-85E" kind="presentation" identifier="CartStoryboard" id="lb7-pe-EQq"/>
+                        <segue destination="EAD-Jx-85E" kind="show" identifier="CartStoryboard" id="lb7-pe-EQq"/>
                     </connections>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xYf-84-Qbg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

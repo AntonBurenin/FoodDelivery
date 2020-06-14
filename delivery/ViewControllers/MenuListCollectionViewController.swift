@@ -19,7 +19,7 @@ class MenuListCollectionViewController: UICollectionViewController {
     //MARK : - Life Cycles View Controller
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationItem.title = category.rawValue
+        navigationItem.title = category.rawValue.capitalized
         setupCollectionView()
         addButtonCart()
     }
