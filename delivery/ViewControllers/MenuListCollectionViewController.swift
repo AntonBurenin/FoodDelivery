@@ -21,7 +21,7 @@ class MenuListCollectionViewController: UICollectionViewController {
         super.viewDidLoad()
         navigationItem.title = category.rawValue
         setupCollectionView()
-        
+        addButtonCart()
     }
     
     //MARK: - Override Methods
@@ -64,6 +64,18 @@ class MenuListCollectionViewController: UICollectionViewController {
         guard let numberofitem = indexPath.first else { return }
         let descriptionDishVC = segue.destination as! DescriptionDishViewController
         descriptionDishVC.dish = dishes[numberofitem.item]
+        
+    }
+    
+    private func addButtonCart() {
+        let cartButton = UIBarButtonItem(barButtonSystemItem: .action, target: self, action: #selector(goToCart))
+        navigationItem.setRightBarButton(cartButton, animated: true)
+    }
+    
+    //MARK : - Selectors
+    
+    @objc func goToCart() {
+        performSegue(withIdentifier: "CartStoryboard", sender: nil)
     }
     
 }

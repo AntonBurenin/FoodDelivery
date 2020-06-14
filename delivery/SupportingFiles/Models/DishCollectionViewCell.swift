@@ -23,6 +23,9 @@ class DishCollectionViewCell: UICollectionViewCell {
     //MARK : - Public property
     var dish: Dish!
     
+    @IBAction func addToCart() {
+        Cart.shared.addDish(dish)
+    }
 }
 struct Constrants {
     static let leftDistanceToView: CGFloat = 20
