@@ -36,6 +36,10 @@ class CartViewController: UIViewController, UITableViewDataSource, UITableViewDe
         return 85
     }
     
+    private func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath){
+    tableView.deselectRow(at: indexPath as IndexPath, animated: true)
+    }
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cartCell", for: indexPath) as! CartTableViewCell
         
@@ -72,7 +76,7 @@ class CartViewController: UIViewController, UITableViewDataSource, UITableViewDe
             } else {
                 dishes = Cart.shared.getDishes()
                 tableView.reloadData()
-                print(sumLabel.text)
+                
             }
         }
     }

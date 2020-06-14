@@ -16,6 +16,10 @@ class CategoryTableViewController: UITableViewController {
         super.viewDidLoad()
         //не забыть удалить, если не изменится
     }
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath){
+        tableView.deselectRow(at: indexPath as IndexPath, animated: true)
+    } 
 
     // MARK: - Table view data source
 
