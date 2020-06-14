@@ -18,6 +18,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Корзина пока пуста" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JjH-Pc-Wn0">
+                                <rect key="frame" x="8" y="247.5" width="304" height="53"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="53" id="Q36-ol-Mfq"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="Wtc-fs-N2d">
                                 <rect key="frame" x="8" y="378.5" width="304" height="50"/>
                                 <subviews>
@@ -249,7 +258,9 @@
                             <constraint firstItem="2wU-T3-wXv" firstAttribute="top" secondItem="Wtc-fs-N2d" secondAttribute="bottom" constant="41.5" id="42O-5V-S2I"/>
                             <constraint firstItem="2wU-T3-wXv" firstAttribute="top" secondItem="Wtc-fs-N2d" secondAttribute="bottom" constant="41.5" id="4At-bz-WP3"/>
                             <constraint firstItem="82f-2W-Vr3" firstAttribute="trailing" secondItem="aBh-N4-WbB" secondAttribute="trailing" id="6w5-0i-YZH"/>
+                            <constraint firstItem="JjH-Pc-Wn0" firstAttribute="centerY" secondItem="aBh-N4-WbB" secondAttribute="centerY" constant="-20" id="CZD-Fd-qK9"/>
                             <constraint firstItem="82f-2W-Vr3" firstAttribute="leading" secondItem="aBh-N4-WbB" secondAttribute="leading" id="E3L-ck-umo"/>
+                            <constraint firstItem="JjH-Pc-Wn0" firstAttribute="leading" secondItem="aBh-N4-WbB" secondAttribute="leading" constant="8" id="V8G-Sb-yRe"/>
                             <constraint firstItem="2wU-T3-wXv" firstAttribute="top" secondItem="829-Lo-VVo" secondAttribute="bottom" constant="41.5" id="XQz-fs-Dnm"/>
                             <constraint firstItem="aBh-N4-WbB" firstAttribute="bottom" secondItem="82f-2W-Vr3" secondAttribute="bottom" constant="189.5" id="aYp-e4-UhW"/>
                             <constraint firstItem="82f-2W-Vr3" firstAttribute="top" secondItem="aBh-N4-WbB" secondAttribute="top" id="bGL-vS-nVS"/>
@@ -257,6 +268,7 @@
                             <constraint firstItem="aBh-N4-WbB" firstAttribute="bottom" secondItem="829-Lo-VVo" secondAttribute="bottom" constant="139.5" id="dLL-53-hLP"/>
                             <constraint firstItem="Wtc-fs-N2d" firstAttribute="top" secondItem="82f-2W-Vr3" secondAttribute="bottom" id="g8x-4g-JIN"/>
                             <constraint firstItem="aBh-N4-WbB" firstAttribute="trailing" secondItem="Wtc-fs-N2d" secondAttribute="trailing" constant="8" id="gZw-aD-3b3"/>
+                            <constraint firstItem="aBh-N4-WbB" firstAttribute="trailing" secondItem="JjH-Pc-Wn0" secondAttribute="trailing" constant="8" id="jgb-3l-ayN"/>
                             <constraint firstItem="2wU-T3-wXv" firstAttribute="centerX" secondItem="Wtc-fs-N2d" secondAttribute="centerX" id="pvg-T5-cqp"/>
                             <constraint firstItem="aBh-N4-WbB" firstAttribute="trailing" secondItem="Wtc-fs-N2d" secondAttribute="trailing" constant="8" id="tzf-86-3iQ"/>
                             <constraint firstItem="aBh-N4-WbB" firstAttribute="bottom" secondItem="2wU-T3-wXv" secondAttribute="bottom" constant="48" id="vrG-wm-icY"/>
@@ -297,6 +309,7 @@
                     </view>
                     <connections>
                         <outlet property="confirmButton" destination="2wU-T3-wXv" id="AhN-NI-G2e"/>
+                        <outlet property="emptyCartLabel" destination="JjH-Pc-Wn0" id="9j8-fg-PJ0"/>
                         <outlet property="sumLabel" destination="Pcm-Wr-P0m" id="dd0-z4-TWc"/>
                         <outlet property="tableView" destination="82f-2W-Vr3" id="urT-WR-SM8"/>
                         <outlet property="viewResult" destination="829-Lo-VVo" id="C4M-nS-rmu"/>

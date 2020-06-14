@@ -14,6 +14,7 @@ class CartViewController: UIViewController, UITableViewDataSource, UITableViewDe
     @IBOutlet weak var confirmButton: UIButton!
     @IBOutlet weak var sumLabel: UILabel!
     
+    @IBOutlet weak var emptyCartLabel: UILabel!
     var dishes = Cart.shared.getDishes()
 
     @IBOutlet var viewResult: UIView!
@@ -28,6 +29,10 @@ class CartViewController: UIViewController, UITableViewDataSource, UITableViewDe
         sumLabel.text = constructTextForSumLabel()
         if dishes.count == 0 {
             confirmButton.isEnabled = false
+            confirmButton.backgroundColor = .gray
+            tableView.isHidden = true
+        } else {
+            emptyCartLabel.isHidden = true
         }
     }
     
