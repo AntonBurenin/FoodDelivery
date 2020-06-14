@@ -40,7 +40,7 @@ class DescriptionDishViewController: UIViewController {
     }
     
     @IBAction func cartButtonPressed() {
-        
+        dismiss(animated: true)
     }
 }
 
