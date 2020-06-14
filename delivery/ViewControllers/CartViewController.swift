@@ -26,6 +26,9 @@ class CartViewController: UIViewController, UITableViewDataSource, UITableViewDe
         
         navigationItem.title = "Ваш заказ"
         sumLabel.text = constructTextForSumLabel()
+        if dishes.count == 0 {
+            confirmButton.isEnabled = false
+        }
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
