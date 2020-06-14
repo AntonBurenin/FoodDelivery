@@ -8,41 +8,49 @@
 
 import UIKit
 
-
-
 class MenuListCollectionViewController: UICollectionViewController {
     
-    //MARK : - Public Property
-     var dishes : [Dish]!
-     var category : DishCategoryName!
-    //MARK : - Private Property
+    //MARK: - Public Property
+    var dishes : [Dish]!
+    var category : DishCategoryName!
+    //MARK: - Private Property
     private let reuseIdentifier = "dishCell"
-   
+    
     //MARK : - Life Cycles View Controller
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.title = category.rawValue
         setupCollectionView()
+        
     }
     
-    //MARK : - Override Methods
+    //MARK: - Override Methods
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return dishes.count
     }
-
-    override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! DishCollectionViewCell
-        cell.nameLabel.text = dishes[indexPath.item].name
     
+    override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! DishCollectionViewCell
+        
+        cell.discr = dishes[indexPath.item].description
+        
+        cell.nameLabel.text = dishes[indexPath.item].name
+        
         cell.priceLabel.text = "\(dishes[indexPath.item].price)"
         if let image = UIImage(named: dishes[indexPath.item].name) {
-        
+            
             cell.dishImage.image = image
         }
+        
+        cell.dishImage.customView()
+        cell.dishCustomView.customView()
+        cell.viewDish.layer.cornerRadius = cell.viewDish.frame.width / 6
+        
         return cell
     }
     
-    //MARK : - Private Methods
+    //MARK: - Private Methods
     private func setupCollectionView() {
         let layout = UICollectionViewFlowLayout()
         layout.minimumLineSpacing = Constrants.minimumLineSpacing
@@ -53,10 +61,37 @@ class MenuListCollectionViewController: UICollectionViewController {
         layout.itemSize = CGSize(width: Constrants.width , height: Constrants.height)
         collectionView.collectionViewLayout = layout
     }
+    
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "showDetailVC" {
+            
+            let cell: DishCollectionViewCell = sender as! DishCollectionViewCell
+            let description = cell.discr
+            let nameDish = cell.nameLabel.text
+            let image = cell.dishImage.image
+            let price = cell.priceLabel.text
+            
+            let preview: DescriptionDishViewController = segue.destination as! DescriptionDishViewController
+            preview.dishImage = image
+            preview.nameDish = nameDish
+            preview.price = price
+            preview.descriptionText = description
+        }
+    }
 }
 
 extension MenuListCollectionViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: Constrants.width, height: Constrants.height)
+    }
+}
+
+extension UIView {
+    func customView() {
+        self.layer.cornerRadius = self.frame.width / 6
+        self.layer.shadowOpacity = 1.5
+        self.layer.shadowRadius = 4
+        self.layer.shadowOffset = CGSize.zero
     }
 }
