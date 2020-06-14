@@ -28,9 +28,7 @@ class CartViewController: UIViewController, UITableViewDataSource, UITableViewDe
         navigationItem.title = "Ваш заказ"
         sumLabel.text = constructTextForSumLabel()
         if dishes.count == 0 {
-            confirmButton.isEnabled = false
-            confirmButton.backgroundColor = .gray
-            tableView.isHidden = true
+             tableViewHidden()
         } else {
             emptyCartLabel.isHidden = true
         }
@@ -81,16 +79,24 @@ class CartViewController: UIViewController, UITableViewDataSource, UITableViewDe
             if cell.stepperCustom.value == 0 {
                 dishes = Cart.shared.getDishes()
                 tableView.deleteRows(at: [indexPath], with: .fade)
+                if dishes.count == 0 {
+                     tableViewHidden()
+                }
             } else {
                 dishes = Cart.shared.getDishes()
-                tableView.reloadData()
-                
             }
+            tableView.reloadData()
         }
     }
     
     private func constructTextForSumLabel() -> String {
         return String(format: "%.2f", Cart.shared.getSum()) + "руб"
     }
-
+    
+    private func tableViewHidden() {
+        confirmButton.isEnabled = false
+        confirmButton.backgroundColor = .gray
+        tableView.isHidden = true
+        emptyCartLabel.isHidden = false
+    }
 }

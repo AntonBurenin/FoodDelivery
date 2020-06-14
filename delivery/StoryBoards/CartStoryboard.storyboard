@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Корзина пока пуста" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JjH-Pc-Wn0">
-                                <rect key="frame" x="8" y="247.5" width="304" height="53"/>
+                                <rect key="frame" x="8" y="217.5" width="304" height="53"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="53" id="Q36-ol-Mfq"/>
                                 </constraints>
@@ -258,7 +258,7 @@
                             <constraint firstItem="2wU-T3-wXv" firstAttribute="top" secondItem="Wtc-fs-N2d" secondAttribute="bottom" constant="41.5" id="42O-5V-S2I"/>
                             <constraint firstItem="2wU-T3-wXv" firstAttribute="top" secondItem="Wtc-fs-N2d" secondAttribute="bottom" constant="41.5" id="4At-bz-WP3"/>
                             <constraint firstItem="82f-2W-Vr3" firstAttribute="trailing" secondItem="aBh-N4-WbB" secondAttribute="trailing" id="6w5-0i-YZH"/>
-                            <constraint firstItem="JjH-Pc-Wn0" firstAttribute="centerY" secondItem="aBh-N4-WbB" secondAttribute="centerY" constant="-20" id="CZD-Fd-qK9"/>
+                            <constraint firstItem="JjH-Pc-Wn0" firstAttribute="centerY" secondItem="aBh-N4-WbB" secondAttribute="centerY" constant="-50" id="CZD-Fd-qK9"/>
                             <constraint firstItem="82f-2W-Vr3" firstAttribute="leading" secondItem="aBh-N4-WbB" secondAttribute="leading" id="E3L-ck-umo"/>
                             <constraint firstItem="JjH-Pc-Wn0" firstAttribute="leading" secondItem="aBh-N4-WbB" secondAttribute="leading" constant="8" id="V8G-Sb-yRe"/>
                             <constraint firstItem="2wU-T3-wXv" firstAttribute="top" secondItem="829-Lo-VVo" secondAttribute="bottom" constant="41.5" id="XQz-fs-Dnm"/>
