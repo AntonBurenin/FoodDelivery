@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -27,11 +26,11 @@
                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="dishCell" id="bjD-1Q-cNz" customClass="DishCollectionViewCell" customModule="delivery" customModuleProvider="target">
                                 <rect key="frame" x="70" y="15" width="180" height="280"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="FCV-hD-avb">
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
                                     <rect key="frame" x="0.0" y="0.0" width="180" height="280"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RbC-9x-KNp">
+                                        <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RbC-9x-KNp">
                                             <rect key="frame" x="7" y="8" width="165" height="264"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="McY-GT-Chp">
@@ -41,12 +40,12 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JCR-x9-RcQ">
-                                                    <rect key="frame" x="46" y="226" width="73" height="30"/>
+                                                    <rect key="frame" x="46" y="225.5" width="73" height="30"/>
                                                     <color key="tintColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <state key="normal" title="В корзину"/>
                                                 </button>
                                                 <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="47" translatesAutoresizingMaskIntoConstraints="NO" id="HrR-Cv-U8f">
-                                                    <rect key="frame" x="8" y="197.5" width="149" height="20"/>
+                                                    <rect key="frame" x="8" y="197.5" width="149" height="19.5"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Цена :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wMW-g2-fqb">
                                                             <rect key="frame" x="0.0" y="1" width="51" height="18"/>
@@ -55,7 +54,7 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="131313" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aKG-Y1-zgO">
-                                                            <rect key="frame" x="98" y="0.5" width="51" height="19.5"/>
+                                                            <rect key="frame" x="98" y="0.0" width="51" height="19.5"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
@@ -100,13 +99,13 @@
                                             </constraints>
                                         </view>
                                     </subviews>
-                                    <constraints>
-                                        <constraint firstItem="RbC-9x-KNp" firstAttribute="leading" secondItem="FCV-hD-avb" secondAttribute="leading" constant="7" id="7FB-1w-IaK"/>
-                                        <constraint firstAttribute="bottom" secondItem="RbC-9x-KNp" secondAttribute="bottom" constant="8" id="CxX-OU-JiE"/>
-                                        <constraint firstAttribute="trailing" secondItem="RbC-9x-KNp" secondAttribute="trailing" constant="8" id="Vk7-rn-zPi"/>
-                                        <constraint firstItem="RbC-9x-KNp" firstAttribute="top" secondItem="FCV-hD-avb" secondAttribute="top" constant="8" id="o9a-th-fTw"/>
-                                    </constraints>
-                                </collectionViewCellContentView>
+                                </view>
+                                <constraints>
+                                    <constraint firstItem="RbC-9x-KNp" firstAttribute="leading" secondItem="bjD-1Q-cNz" secondAttribute="leading" constant="7" id="7FB-1w-IaK"/>
+                                    <constraint firstAttribute="bottom" secondItem="RbC-9x-KNp" secondAttribute="bottom" constant="8" id="CxX-OU-JiE"/>
+                                    <constraint firstAttribute="trailing" secondItem="RbC-9x-KNp" secondAttribute="trailing" constant="8" id="Vk7-rn-zPi"/>
+                                    <constraint firstItem="RbC-9x-KNp" firstAttribute="top" secondItem="bjD-1Q-cNz" secondAttribute="top" constant="8" id="o9a-th-fTw"/>
+                                </constraints>
                                 <size key="customSize" width="180" height="280"/>
                                 <connections>
                                     <outlet property="dishCustomView" destination="RbC-9x-KNp" id="TYW-MJ-7Cw"/>
