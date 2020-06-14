@@ -21,8 +21,8 @@ class DescriptionDishViewController: UIViewController {
     
     var nameDish: String!
     var price: String!
-    var dishImage: UIImage!
-    var descriptionText: String!
+    var dishImage: UIImage?
+    var descriptionText: String?
     
     override func viewDidLoad() {
         super.viewDidLoad()

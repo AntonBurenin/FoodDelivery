@@ -33,16 +33,12 @@ class MenuListCollectionViewController: UICollectionViewController {
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! DishCollectionViewCell
         
-        cell.discr = dishes[indexPath.item].description
-        
+        cell.dish = dishes[indexPath.item]
         cell.nameLabel.text = dishes[indexPath.item].name
-        
         cell.priceLabel.text = "\(dishes[indexPath.item].price)"
         if let image = UIImage(named: dishes[indexPath.item].name) {
-            
             cell.dishImage.image = image
         }
-        
         cell.dishImage.customView()
         cell.dishCustomView.customView()
         cell.viewDish.layer.cornerRadius = cell.viewDish.frame.width / 6
@@ -64,21 +60,19 @@ class MenuListCollectionViewController: UICollectionViewController {
     
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "showDetailVC" {
-            
-            let cell: DishCollectionViewCell = sender as! DishCollectionViewCell
-            let description = cell.discr
-            let nameDish = cell.nameLabel.text
-            let image = cell.dishImage.image
-            let price = cell.priceLabel.text
-            
-            let preview: DescriptionDishViewController = segue.destination as! DescriptionDishViewController
-            preview.dishImage = image
-            preview.nameDish = nameDish
-            preview.price = price
-            preview.descriptionText = description
+        guard let indexPath = collectionView.indexPathsForSelectedItems  else { return }
+        guard let numberofitem = indexPath.first else { return }
+        let descriptionDishVC = segue.destination as! DescriptionDishViewController
+        descriptionDishVC.nameDish = dishes[numberofitem.item].name
+        descriptionDishVC.price    = "\(dishes[numberofitem.item].price)"
+        if let description = dishes[numberofitem.item].description {
+             descriptionDishVC.descriptionText = description
         }
-    }
+        if let image = UIImage(named: dishes[numberofitem.item].name) {
+            descriptionDishVC.dishImage = image
+        }
+        }
+    
 }
 
 extension MenuListCollectionViewController: UICollectionViewDelegateFlowLayout {

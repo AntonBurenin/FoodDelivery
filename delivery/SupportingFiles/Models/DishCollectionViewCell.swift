@@ -10,6 +10,7 @@ import UIKit
 
 class DishCollectionViewCell: UICollectionViewCell {
     
+    //MARK : - IB Outlets
     @IBOutlet var dishImage: UIImageView!
     
     @IBOutlet var nameLabel: UILabel!
@@ -18,7 +19,10 @@ class DishCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet var dishCustomView: UIView!
     @IBOutlet var viewDish: UIView!
-    var discr: String!
+   
+    //MARK : - Public property
+    var dish: Dish!
+    
 }
 struct Constrants {
     static let leftDistanceToView: CGFloat = 20
