@@ -117,7 +117,7 @@
                                     <outlet property="nameLabel" destination="McY-GT-Chp" id="yr6-in-Mtl"/>
                                     <outlet property="priceLabel" destination="aKG-Y1-zgO" id="48l-L7-Hro"/>
                                     <outlet property="viewDish" destination="0Qm-bI-fM4" id="yXm-tb-Ptq"/>
-                                    <segue destination="plw-xO-b3s" kind="presentation" identifier="showDetailVC" id="uUl-6G-mxU"/>
+                                    <segue destination="plw-xO-b3s" kind="show" identifier="showDetailVC" id="uUl-6G-mxU"/>
                                 </connections>
                             </collectionViewCell>
                         </cells>
