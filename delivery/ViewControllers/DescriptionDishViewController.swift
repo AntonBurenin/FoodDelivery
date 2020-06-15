@@ -23,7 +23,6 @@ class DescriptionDishViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         fillingCell()
         customDesign()
         navigationItem.largeTitleDisplayMode = .never
