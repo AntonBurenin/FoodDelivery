@@ -1,8 +1,8 @@
 {
   "images" : [
     {
-      "filename" : "Салат Греческий.jpg",
       "idiom" : "universal",
+      "filename" : "Бургер с ягненком.jpg",
       "scale" : "1x"
     },
     {
@@ -15,7 +15,7 @@
     }
   ],
   "info" : {
-    "author" : "xcode",
-    "version" : 1
+    "version" : 1,
+    "author" : "xcode"
   }
 }
