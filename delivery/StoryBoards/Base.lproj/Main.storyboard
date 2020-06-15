@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="zqO-nS-q4Y">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="zqO-nS-q4Y">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -47,7 +49,7 @@
                                                             </constraints>
                                                         </view>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="justified" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LVl-wV-aIj">
-                                                            <rect key="frame" x="116" y="22.5" width="236" height="41"/>
+                                                            <rect key="frame" x="116" y="25" width="236" height="36"/>
                                                             <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
@@ -86,7 +88,7 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Menu" id="Rkb-db-phy">
-                        <barButtonItem key="rightBarButtonItem" title="Cart" image="cart.fill" catalog="system" id="gul-Oe-SDj">
+                        <barButtonItem key="rightBarButtonItem" title="В корзину" id="gul-Oe-SDj">
                             <connections>
                                 <segue destination="a9j-4N-QbL" kind="show" id="Fqh-RR-szX"/>
                             </connections>
@@ -132,7 +134,4 @@
             <point key="canvasLocation" x="-158" y="148"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="cart.fill" catalog="system" width="128" height="102"/>
-    </resources>
 </document>

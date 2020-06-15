@@ -14,7 +14,6 @@ class DishCollectionViewCell: UICollectionViewCell {
     @IBOutlet var dishImage: UIImageView!
     
     @IBOutlet var nameLabel: UILabel!
-    
     @IBOutlet var priceLabel: UILabel!
     
     @IBOutlet var dishCustomView: UIView!
@@ -27,6 +26,7 @@ class DishCollectionViewCell: UICollectionViewCell {
         Cart.shared.addDish(dish)
     }
 }
+
 struct Constrants {
     static let leftDistanceToView: CGFloat = 20
     static let rightDistanceToView: CGFloat = 20

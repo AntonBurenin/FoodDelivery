@@ -39,6 +39,5 @@ class Cart {
         for (dish, count) in arrayDishes {
             dishes[dish] = count != 0 ? count : nil
         }
-        print("heeeeeeeyoooo")
     }
 }

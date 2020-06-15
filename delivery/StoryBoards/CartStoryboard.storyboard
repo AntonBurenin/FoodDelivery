@@ -220,11 +220,11 @@
                                         <connections>
                                             <outlet property="contentViewPhoto" destination="Eps-uv-vhH" id="0u9-GA-1Ls"/>
                                             <outlet property="countLabel" destination="yRq-32-7os" id="p8m-hU-cH1"/>
+                                            <outlet property="dishStepper" destination="h2y-jV-vC6" id="2r7-y4-n3f"/>
                                             <outlet property="nameLabel" destination="n3m-0S-sKW" id="1Nh-NT-Tm1"/>
                                             <outlet property="photoImageView" destination="ayn-EN-btz" id="QQx-IU-gOG"/>
                                             <outlet property="photoView" destination="ESd-KD-lgN" id="PXi-Xj-sKj"/>
                                             <outlet property="priceLabel" destination="MzW-eV-PZ5" id="gun-Ay-WwY"/>
-                                            <outlet property="stepperCustom" destination="h2y-jV-vC6" id="2r7-y4-n3f"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -250,6 +250,9 @@
                                         <exclude reference="M12-bl-gSU"/>
                                     </mask>
                                 </variation>
+                                <connections>
+                                    <action selector="confirmTapped" destination="QOB-wL-SwK" eventType="touchUpInside" id="v7c-Nw-XcN"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

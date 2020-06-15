@@ -21,17 +21,10 @@ class CartViewController: UIViewController, UITableViewDataSource, UITableViewDe
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        viewResult.customViewDesing()
-        confirmButton.customViewDesing()
-        
+        customDesign()
         navigationItem.title = "Ваш заказ"
         sumLabel.text = constructTextForSumLabel()
-        if dishes.count == 0 {
-             tableViewHidden()
-        } else {
-            emptyCartLabel.isHidden = true
-        }
+        startSettingsTableOrLabel()
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -54,10 +47,10 @@ class CartViewController: UIViewController, UITableViewDataSource, UITableViewDe
         cell.nameLabel.text = dish.name
         cell.priceLabel.text = String(format: "%.2f", dish.price)
         
-        cell.stepperCustom.minimumValue = 0
-        cell.stepperCustom.maximumValue = 9
-        cell.stepperCustom.value = Double(dishes[indexPath.row].1)
-        cell.stepperCustom.tag =  indexPath.row
+        cell.dishStepper.minimumValue = 0
+        cell.dishStepper.maximumValue = 9
+        cell.dishStepper.value = Double(dishes[indexPath.row].1)
+        cell.dishStepper.tag =  indexPath.row
         
         cell.countLabel.text = cell.constructTextForCountLabel()
         cell.photoImageView.image = UIImage(named: dish.photo)
@@ -71,12 +64,16 @@ class CartViewController: UIViewController, UITableViewDataSource, UITableViewDe
         return cell
     }
     
+    @IBAction func confirmTapped() {
+        showAlert(with: "Связь прервалась", and: "Попробуйте повторить позже")
+    }
+    
     func didTappedStepper(cell: CartTableViewCell) {
         if let indexPath = tableView.indexPath(for: cell) {
             cell.countLabel.text = cell.constructTextForCountLabel()
-            Cart.shared.dishes[dishes[indexPath.row].0] = Int(cell.stepperCustom.value) != 0 ? Int(cell.stepperCustom.value) : nil
+            Cart.shared.dishes[dishes[indexPath.row].0] = Int(cell.dishStepper.value) != 0 ? Int(cell.dishStepper.value) : nil
             sumLabel.text = constructTextForSumLabel()
-            if cell.stepperCustom.value == 0 {
+            if cell.dishStepper.value == 0 {
                 dishes = Cart.shared.getDishes()
                 tableView.deleteRows(at: [indexPath], with: .fade)
                 if dishes.count == 0 {
@@ -93,10 +90,34 @@ class CartViewController: UIViewController, UITableViewDataSource, UITableViewDe
         return String(format: "%.2f", Cart.shared.getSum()) + "руб"
     }
     
+    private func customDesign() {
+        viewResult.customViewDesing()
+        confirmButton.customViewDesing()
+    }
+    
+    private func startSettingsTableOrLabel() {
+        if dishes.count == 0 {
+            tableViewHidden()
+        } else {
+            emptyCartLabel.isHidden = true
+        }
+    }
+    
     private func tableViewHidden() {
         confirmButton.isEnabled = false
         confirmButton.backgroundColor = .gray
         tableView.isHidden = true
         emptyCartLabel.isHidden = false
+    }
+}
+
+// MARK: - UIAlertController
+extension CartViewController {
+    private func showAlert(with title: String, and message: String) {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "OK", style: .default) { _ in
+        }
+        alert.addAction(okAction)
+        present(alert, animated: true)
     }
 }

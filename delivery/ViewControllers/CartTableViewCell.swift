@@ -14,7 +14,7 @@ protocol CartTableViewCellDelegate: class {
 
 class CartTableViewCell: UITableViewCell {
   
-    @IBOutlet var stepperCustom: UIStepper!
+    @IBOutlet var dishStepper: UIStepper!
     
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var priceLabel: UILabel!
@@ -28,8 +28,7 @@ class CartTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
-        stepperCustom.customViewDesing()
+        dishStepper.customViewDesing()
     }
     
     @IBAction func stepperDidTapped() {
@@ -37,7 +36,7 @@ class CartTableViewCell: UITableViewCell {
     }
     
     func constructTextForCountLabel() -> String {
-        return "x " + String(Int(stepperCustom.value)) + " шт."
+        return "x " + String(Int(dishStepper.value)) + " шт."
     }
     
 }

@@ -24,21 +24,29 @@ class DescriptionDishViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        nameLabel.text = dish.name
-        priceLabel.text = "\(dish.price.description) p"
-        dishImageView.image = UIImage(named: dish.photo)
-        descriptionTextView.text = dish.description ?? dish.name
-        
-        contentView.desinView()
-        dishImageView.desinView()
-        viewCustom.desinView()
-        cardButton.desinView()
-        descriptionTextView.desinView()
+        fillingCell()
+        customDesign()
+        navigationItem.largeTitleDisplayMode = .never
     }
     
     @IBAction func cartButtonPressed() {
         Cart.shared.addDish(dish)
         dismiss(animated: true)
+    }
+    
+    private func fillingCell() {
+        nameLabel.text = dish.name
+        priceLabel.text = "\(String(format: "%.2f", dish.price)) p"
+        dishImageView.image = UIImage(named: dish.photo)
+        descriptionTextView.text = dish.description ?? dish.name
+    }
+    
+    private func customDesign() {
+        contentView.desinView()
+        dishImageView.desinView()
+        viewCustom.desinView()
+        cardButton.desinView()
+        descriptionTextView.desinView()
     }
 }
 
