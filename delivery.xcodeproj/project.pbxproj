@@ -66,6 +66,7 @@
 				D7188C6824930744001D81DF /* CartViewController.swift */,
 				113A78F9249299C8001C859A /* CategoryTableViewController.swift */,
 				116A65332493D75700E7A9D5 /* CustomTableViewCell.swift */,
+				EEAAA3122493C48D000CD8AC /* DishCollectionViewCell.swift */,
 				113A78FB249299EB001C859A /* MenuListCollectionViewController.swift */,
 				113A78FD24929A08001C859A /* DescriptionDishViewController.swift */,
 			);
@@ -113,7 +114,6 @@
 		EEAAA309249272B8000CD8AC /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				EEAAA3122493C48D000CD8AC /* DishCollectionViewCell.swift */,
 				EEAAA30524926F6C000CD8AC /* DishCategory.swift */,
 				EEAAA30A249272D3000CD8AC /* DataManager.swift */,
 				EEAAA3072492724F000CD8AC /* DishModel.swift */,

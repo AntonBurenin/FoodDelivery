@@ -35,7 +35,7 @@ class MenuListCollectionViewController: UICollectionViewController {
         
         cell.dish = dishes[indexPath.item]
         cell.nameLabel.text = dishes[indexPath.item].name
-        cell.priceLabel.text = "\(dishes[indexPath.item].price)"
+        cell.priceLabel.text = "\(String(format: "%.2f", dishes[indexPath.item].price)) p"//"\(dishes[indexPath.item].price)"
         if let image = UIImage(named: dishes[indexPath.item].name) {
             cell.dishImage.image = image
         }

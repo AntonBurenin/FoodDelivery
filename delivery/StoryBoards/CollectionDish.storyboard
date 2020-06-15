@@ -36,7 +36,7 @@
                                             <rect key="frame" x="7" y="8" width="165" height="264"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="McY-GT-Chp">
-                                                    <rect key="frame" x="4" y="164" width="157" height="22"/>
+                                                    <rect key="frame" x="8" y="164" width="149" height="22"/>
                                                     <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="18"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -48,17 +48,17 @@
                                                         <action selector="addToCart" destination="bjD-1Q-cNz" eventType="touchUpInside" id="q3f-mY-eez"/>
                                                     </connections>
                                                 </button>
-                                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="47" translatesAutoresizingMaskIntoConstraints="NO" id="HrR-Cv-U8f">
+                                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="HrR-Cv-U8f">
                                                     <rect key="frame" x="8" y="197.5" width="149" height="20"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Цена :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wMW-g2-fqb">
-                                                            <rect key="frame" x="0.0" y="1" width="51" height="18"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Цена :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="wMW-g2-fqb">
+                                                            <rect key="frame" x="0.0" y="1" width="69.5" height="18"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="131313" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aKG-Y1-zgO">
-                                                            <rect key="frame" x="98" y="0.5" width="51" height="19.5"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="400.00 р" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="aKG-Y1-zgO">
+                                                            <rect key="frame" x="79.5" y="0.5" width="69.5" height="19.5"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
@@ -89,7 +89,7 @@
                                             </subviews>
                                             <color key="backgroundColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <constraints>
-                                                <constraint firstItem="McY-GT-Chp" firstAttribute="leading" secondItem="RbC-9x-KNp" secondAttribute="leading" constant="4" id="6tj-hA-Okp"/>
+                                                <constraint firstItem="McY-GT-Chp" firstAttribute="leading" secondItem="RbC-9x-KNp" secondAttribute="leading" constant="8" id="6tj-hA-Okp"/>
                                                 <constraint firstItem="HrR-Cv-U8f" firstAttribute="top" secondItem="McY-GT-Chp" secondAttribute="bottom" constant="11.5" id="88v-fD-hZJ"/>
                                                 <constraint firstAttribute="trailing" secondItem="HrR-Cv-U8f" secondAttribute="trailing" constant="8" id="GYA-Ov-pKL"/>
                                                 <constraint firstItem="0Qm-bI-fM4" firstAttribute="top" secondItem="RbC-9x-KNp" secondAttribute="top" constant="6" id="HJd-iB-GL6"/>
@@ -97,7 +97,7 @@
                                                 <constraint firstItem="HrR-Cv-U8f" firstAttribute="leading" secondItem="RbC-9x-KNp" secondAttribute="leading" constant="8" id="Uda-3v-vuQ"/>
                                                 <constraint firstItem="McY-GT-Chp" firstAttribute="top" secondItem="PWq-xq-QsC" secondAttribute="bottom" constant="10" id="X4S-ny-aWQ"/>
                                                 <constraint firstItem="JCR-x9-RcQ" firstAttribute="top" secondItem="HrR-Cv-U8f" secondAttribute="bottom" constant="8.5" id="oeM-VV-DL5"/>
-                                                <constraint firstAttribute="trailing" secondItem="McY-GT-Chp" secondAttribute="trailing" constant="4" id="vje-6P-dHN"/>
+                                                <constraint firstAttribute="trailing" secondItem="McY-GT-Chp" secondAttribute="trailing" constant="8" id="vje-6P-dHN"/>
                                                 <constraint firstItem="JCR-x9-RcQ" firstAttribute="bottom" secondItem="RbC-9x-KNp" secondAttribute="bottomMargin" id="zBd-cI-47u"/>
                                                 <constraint firstItem="0Qm-bI-fM4" firstAttribute="leading" secondItem="RbC-9x-KNp" secondAttribute="leading" constant="6" id="zyy-kK-5cf"/>
                                             </constraints>
@@ -171,11 +171,11 @@
                                                     <constraint firstItem="mgY-IA-kJ1" firstAttribute="top" secondItem="iRZ-gA-YM9" secondAttribute="top" id="qCj-pq-2UE"/>
                                                 </constraints>
                                             </view>
-                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="124" translatesAutoresizingMaskIntoConstraints="NO" id="i6c-uq-j7y">
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="i6c-uq-j7y">
                                                 <rect key="frame" x="0.0" y="340" width="280" height="26.5"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ivH-uw-yMD">
-                                                        <rect key="frame" x="0.0" y="0.0" width="78" height="26.5"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="120" height="26.5"/>
                                                         <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <state key="normal" title="В корзину">
                                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -184,8 +184,8 @@
                                                             <action selector="cartButtonPressed" destination="plw-xO-b3s" eventType="touchUpInside" id="a2i-XM-Dbp"/>
                                                         </connections>
                                                     </button>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rnK-Ty-IHY">
-                                                        <rect key="frame" x="202" y="0.0" width="78" height="26.5"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="rnK-Ty-IHY">
+                                                        <rect key="frame" x="160" y="0.0" width="120" height="26.5"/>
                                                         <fontDescription key="fontDescription" name="AppleSDGothicNeo-Light" family="Apple SD Gothic Neo" pointSize="22"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
