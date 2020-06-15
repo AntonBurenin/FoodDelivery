@@ -68,8 +68,10 @@ class MenuListCollectionViewController: UICollectionViewController {
     }
     
     private func addButtonCart() {
-        let cartButton = UIBarButtonItem(barButtonSystemItem: .action, target: self, action: #selector(goToCart))
+        guard let image = UIImage(named: "cart") else { return }
+        let cartButton = UIBarButtonItem(image: image, style: .done, target: self, action: #selector(goToCart))
         navigationItem.setRightBarButton(cartButton, animated: true)
+        
     }
     
     //MARK : - Selectors
